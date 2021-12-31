@@ -7,13 +7,16 @@ import javax.persistence.GenerationType
 import javax.validation.constraints.NotNull
 import javax.persistence.Column
 @Entity
-@Table(name = "categories")
-class Category {
+@Table(name = "books")
+class Book {
+
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 Integer id
 
 @NotNull
 @Column(nullable = false)
+Integer category_id
 String name
+String isbn
 }
